@@ -1,23 +1,23 @@
 #Listo with jQuery
 
-Today we will be turning our HTML / CSS assessment into a real life web application using jQuery named Listo!
+Using jQuery, we will be turning our HTML / CSS assessment into a real life web application named Listo!
 
 With Listo, users will be able to:
 
 *Create new list items.
-*Move the items from 'New' to 'In Progress' to 'Archived' to deleted.
-*Save list items to our browsers local storage so that it persists, even if we close the browser.
+*Move the items from 'New' to 'In Progress', then to 'Archived', and then delete the item.
+*Save list items to our browser's local storage so that it persists, even if we close the browser.
 
 #Step 1
 ###Our Environment
 
-We are going to be setting up the environment from scratch, so that we can get used to building our projects.
+We are going to be setting up the environment from scratch so that we can get used to building our projects.
 
-First, fork and clone this repo, so that we can access this README during our development. For the sake of simplicity we have created the index.html file, so no need to change it yet.
+First, fork and clone this repo, so that we can access this README during our development. For the sake of simplicity, the index.html file has already been created, so no need to change it yet.
 
-After that, let's create a folder called 'app'. This is where we will store the guts of our app. Inside the app folder let's make a folder called 'scripts'. This is where we will store our JavaScript.
+After that, create a folder called 'app'. This is where we will store the guts of our app. Inside the app folder, make a folder called 'scripts'. This is where we will store our JavaScript.
 
-Inside the js folder we will create our main javascript named something awesome like 'app.js'.
+Create our main JavaScript file inside the scripts folder, and name it something awesome like 'app.js'.
 
 Then inside the app folder we will create a folder called 'Styles', this is where we will store our CSS files. Inside the 'Styles' folder let's make a file called main.css so that we have a place to style things.
 
