@@ -13,13 +13,13 @@ With Listo, users will be able to:
 
 We are going to be setting up the environment from scratch so that we can get used to building our projects.
 
-First, fork and clone this repo, so that we can access this README during our development. For the sake of simplicity, the index.html file has already been created, so no need to change it yet.
+First, fork and clone this repo, so that we can access this README during our development. For the sake of simplicity, the index.html file has already been created. So, no need to change it yet.
 
-After that, create a folder called 'app'. This is where we will store the guts of our app. Inside the app folder, make a folder called 'scripts'. This is where we will store our JavaScript.
+After that, create a folder called 'app'. This is where the guts of the app will be stored. Inside the app folder, make a folder called 'scripts'. This is where the JavaScript files will be stored.
 
-Create our main JavaScript file inside the scripts folder, and name it something awesome like 'app.js'.
+Create the main JavaScript file inside the scripts folder, and name it something awesome like 'app.js'.
 
-Then inside the app folder we will create a folder called 'Styles', this is where we will store our CSS files. Inside the 'Styles' folder let's make a file called main.css so that we have a place to style things.
+Inside the app folder, create a folder called 'Styles'. This is where the CSS files will be stored. Inside the 'Styles' folder, make a file called main.css.
 
 Now that we've made our basic files, we want to get them all hooked together in our index.html file.
 
