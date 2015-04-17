@@ -39,11 +39,11 @@ The first thing to do is go into the app.js file and create the document ready f
 
 	$(document).ready(function() {//ALL CODE GOES IN HERE});
 
-This essentially allows us to load our app when the document loads. It's a weird jQuery thing, but it's what we do. Remember, all of the code in our app.js will go within the {} of the above function.
+This essentially allows the app to load when the document loads. It's a weird jQuery thing. Remember, all of the code in the app.js will go within the {} of the above function.
 
 ###Basic Architecture
 
-We are going to be creating a todo list. So the easiest way to store a list of things is to create an array!
+We are going to be creating a todo list. So, the easiest way to store a list of things is to create an array!
 
 *app.js*
 
@@ -78,7 +78,9 @@ Let's hop over to our index.html and create a space for them to type in their li
 
 This will create a form with a save and cancel button. We want to give the save and cancel buttons IDs so that we can call them with jQuery. We also want to give the form an ID so it can be accessed as well.
 
-You will come to see that most elements in our html will have an ID. That is so that jQuery has a lot of hooks to make contact with what it is looking to manipulate.
+<!-- You will come to see that most elements in our html will have an ID. That is so that jQuery has a lot of hooks to make contact with what it is looking to manipulate. -->
+
+When using jQuery, most elements in HTML will have an ID. This gives provides hooks to grab specific HTML elements for jQuery to manipulate.
 
 ###Making our addTask function
 
