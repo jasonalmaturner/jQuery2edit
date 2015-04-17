@@ -21,19 +21,19 @@ Create the main JavaScript file inside the scripts folder, and name it something
 
 Inside the app folder, create a folder called 'Styles'. This is where the CSS files will be stored. Inside the 'Styles' folder, make a file called main.css.
 
-Now that we've made our basic files, we want to get them all hooked together in our index.html file.
+Now that all the basic files have been created, they all need to be hooked together in the index.html file.
 
-*Remember: a lot of times we get errors in the beginning of a project is because the files are not properly linked. *
+*Remember: a lot of times we get errors in the beginning of a project is because the files are not properly linked.*
 
-*Remember: your browser will read your index.html from top-to-bottom, left-to-right. This means if you put your jquery under your app.js file you will end up with an error.*
+*Remember: your browser will read your index.html from top-to-bottom, left-to-right. This means if you put your jQuery under your app.js file you will end up with an error.*
 
 
 #Step 2
 ###Time For jQuery
 
-Now that we have our environment set up, and our markup written, it's time to get into the JavaScript with jQuery.
+Now that the environment is set up and markup written, it's time to get into the JavaScript with jQuery.
 
-The first thing we want to do is go into our app.js file and create our document ready function:
+The first thing to do is go into the app.js file and create the document ready function:
 
 *app.js*
 
