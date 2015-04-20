@@ -2,11 +2,14 @@ $(document).ready(function(){
 
 var listo = [];
 
-var Task = function(task) {
+function Task (task) {
   this.task = task;
   this.id = 'new';
 };
 
+function addTask (task) {
+  
+}
 
 
 });

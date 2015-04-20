@@ -49,9 +49,11 @@ We are going to be creating a todo list. So, the easiest way to store a list of 
 
 	var listo = [];
 
-Listo will be our main array for storing tasks.
+Listo will be the main array for storing tasks.
 
-Now, we don't want to just store strings. So instead we will store Task objects into our array. Because our users are going to be making a lot of Tasks we should perhaps streamline the object creating process with a **constructor**!
+We don't want the listo array to just store strings. We need to store both the task string the user will type in, and the status of the task. So, we will store task objects into the array, and each object will have two keys. Because the users are going to be creating a lot of tasks, the process can be streamlined by creating objects with a **constructor**!
+
+<!-- Now, we don't want to just store strings. So instead we will store Task objects into our array. Because our users are going to be making a lot of Tasks we should perhaps streamline the object creating process with a **constructor**! -->
 
 *app.js*
 
@@ -84,7 +86,7 @@ When using jQuery, most elements in HTML will have an ID. This gives provides ho
 
 ###Making our addTask function
 
-When we enter something into the input field and hit save, we want to create an object and push it to our array.
+When the user enters something into the input field and clicks the save button, we want to create an object and push it to our array.
 
 Let's make a function to do that for us.
 
@@ -94,7 +96,7 @@ Let's make a function to do that for us.
 
 Cool, a blank function named 'addTask'!
 
-Now, we don't want people to be able to create blank todo tasks, that would be a little frustrating. Let's put a conditional in the function so that it only runs if our task is there.
+Now, we don't want people to be able to create blank todo tasks. That would be a little frustrating. Let's put a condition in the function so that it only runs if the user enters a task into the input.
 
 *app.js*
 
@@ -104,7 +106,7 @@ Now, we don't want people to be able to create blank todo tasks, that would be a
 		}
 	};
 
-Now our code will only run if 'task' is truthy. Empty tasks are not truthy since they're just empty strings.
+The code will only run if 'task' is truthy. Empty tasks are not truthy since they're just empty strings.
 
 Next we want to call our task constructor and fill it with the new task, then we will push the new task to listo, and save it.
 
