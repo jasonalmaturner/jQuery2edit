@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+$('#newTaskForm').hide();
+
 var listo = [];
 
 function Task (task) {

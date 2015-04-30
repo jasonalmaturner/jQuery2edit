@@ -139,16 +139,17 @@ There are a couple of things that could be added to this function to make it wor
 		}
 	};
 
-Create a way to toggle the form to see how jQuery affects the app's design.
+Next, create a way to toggle the form to see how jQuery affects the app's design.
 
-First we should make it so that our newTaskForm is hidden when the document loads. Let's put this near the top of our document so that it loads correctly.
+The newTaskForm should be hidden when the document initially loads. So, place the code that hides the newTaskForm near the top of the app.js file so that it loads correctly.
+
+<!-- First we should make it so that our newTaskForm is hidden when the document loads. Let's put this near the top of our document so that it loads correctly. -->
 
 *app.js*
 
 	$('#newTaskForm').hide();
 
-
-Then let's add the fade toggle so that our New button will hide and show the input form at the same time.
+Then, add the fade toggle so that the New button will hide and show the input form at the same time.
 
 *app.js*
 
