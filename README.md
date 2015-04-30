@@ -122,7 +122,7 @@ Next, create a new task with the task constructor, passing it the 'task', and th
 	};
 
 
-There are a few things that could be added to this function to make it work correctly and improve the user experience. It would be convenient to have the input form clear after submitting. And, the new list item needs to show up on the view in the index.html.
+There are a couple of things that could be added to this function to make it work correctly and improve the user experience. It would be convenient to have the input form clear after submitting. And, the new list item needs to show up on the view in the index.html.
 
 <!-- Now there are a few things we should add to this function to make it work correctly. First we want the input form to clear after we submit it, which currently isn't happening. Then we want to make it so we can show our new list item in our index.html. -->
 
@@ -133,13 +133,11 @@ There are a few things that could be added to this function to make it work corr
 			var newTask = new Task(task);
 			listo.push(newTask);
 
-			$('#newItemInput').val('');
-			$('#newList').append('<a href="#" class="" id="item"><li class="list-group-item">' + newTask.task + '<span class="arrow pull-right"><i class="glyphicon glyphicon-arrow-right"></span></li></a>');
+			$('#newItemInput').val(''); /*This will replace whatever string is in the input box with an empty string*/
+			$('#newList').append('<a href="#" class="" id="item"><li class="list-group-item">' + newTask.task + '<span class="arrow pull-right"><i class="glyphicon glyphicon-arrow-right"></span></li></a>'); /*This will add the new list item to the view.*/
 
 		}
 	};
-
-
 
 Create a way to toggle the form to see how jQuery affects the app's design.
 
