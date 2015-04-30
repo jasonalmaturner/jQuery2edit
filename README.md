@@ -149,7 +149,7 @@ The newTaskForm should be hidden when the document initially loads. So, place th
 
 	$('#newTaskForm').hide();
 
-Then, add the fade toggle so that the New button will hide and show the input form at the same time.
+Then, add the fadeToggle so that the New button will hide and show the input form at the same time.
 
 *app.js*
 
