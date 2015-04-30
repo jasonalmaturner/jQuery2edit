@@ -51,7 +51,7 @@ We are going to be creating a todo list. So, the easiest way to store a list of 
 
 Listo will be the main array for storing tasks.
 
-We don't want the listo array to just store strings. We need to store both the task string the user will type in, and the status of the task. So, we will store task objects into the array, and each object will have two keys. Because the users are going to be creating a lot of tasks, the process can be streamlined by creating objects with a **constructor**!
+We don't want the listo array to just store strings. We need to store both the task string that the user will input, and the status of the task. So, the listo array will store task objects, and each object will have two keys. Since the users are going to be creating a lot of tasks, the process can be streamlined by creating objects with a **constructor**!
 
 <!-- Now, we don't want to just store strings. So instead we will store Task objects into our array. Because our users are going to be making a lot of Tasks we should perhaps streamline the object creating process with a **constructor**! -->
 
@@ -63,11 +63,11 @@ We don't want the listo array to just store strings. We need to store both the t
 	}
 
 
-We now have an array to push our tasks onto, and a task constructor so our users can create object tasks for their lists.
+Now there is an array to push tasks onto, and a task constructor so the users can create object tasks for their lists.
 
-The next thing we want is the ability for a user to write a todo task into our index.html and save it to the array.
+The next thing needed is the ability for a user to input a todo task into our index.html and save it to the array.
 
-Let's hop over to our index.html and create a space for them to type in their list items.
+Go to index.html and create a space for users to type in list items.
 
 *index.html*
 
@@ -78,17 +78,17 @@ Let's hop over to our index.html and create a space for them to type in their li
 	        <button id="cancel">Cancel</button>
    	    </form>
 
-This will create a form with a save and cancel button. We want to give the save and cancel buttons IDs so that we can call them with jQuery. We also want to give the form an ID so it can be accessed as well.
+This will create a form with a save and cancel button. The save and cancel buttons and the form are given ids so that they can be called with jQuery.
 
 <!-- You will come to see that most elements in our html will have an ID. That is so that jQuery has a lot of hooks to make contact with what it is looking to manipulate. -->
 
-When using jQuery, most elements in HTML will have an ID. This gives provides hooks to grab specific HTML elements for jQuery to manipulate.
+When using jQuery, most elements in HTML will have an ID. This provides hooks to specific HTML elements for jQuery to grab and manipulate.
 
 ###Making our addTask function
 
-When the user enters something into the input field and clicks the save button, we want to create an object and push it to our array.
+When the user enters something into the input field and clicks the save button, an objected should be created and that object pushed to the array.
 
-Let's make a function to do that for us.
+This can be done by making a function.
 
 *app.js*
 
@@ -96,7 +96,7 @@ Let's make a function to do that for us.
 
 Cool, a blank function named 'addTask'!
 
-Now, we don't want people to be able to create blank todo tasks. That would be a little frustrating. Let's put a condition in the function so that it only runs if the user enters a task into the input.
+Now, it wouldn't be good for users to be able to create blank todo tasks. That would be a little frustrating. So, make sure the function has a condition that only runs if the user enters a task into the input.
 
 *app.js*
 
@@ -106,37 +106,42 @@ Now, we don't want people to be able to create blank todo tasks. That would be a
 		}
 	};
 
-The code will only run if 'task' is truthy. Empty tasks are not truthy since they're just empty strings.
+The code will only run if 'task' is truthy. Empty tasks are not truthy, since they're just empty strings.
 
-Next we want to call our task constructor and fill it with the new task, then we will push the new task to listo, and save it.
+Next, create a new task with the task constructor, passing it the 'task', and then pushing the new task to the listo array.
+
+<!-- Next we want to call our task constructor and fill it with the new task, then we will push the new task to listo, and save it. -->
 
 *app.js*
 
 	var addTask = function(task) {
 		if(task) {
-			task = new Task(task);
-			listo.push(task);
+			var newTask = new Task(task);
+			listo.push(newTask);
 		}
 	};
 
 
-Now there are a few things we should add to this function to make it work correctly. First we want the input form to clear after we submit it, which currently isn't happening. Then we want to make it so we can show our new list item in our index.html.
+There are a few things that could be added to this function to make it work correctly and improve the user experience. It would be convenient to have the input form clear after submitting. And, the new list item needs to show up on the view in the index.html.
+
+<!-- Now there are a few things we should add to this function to make it work correctly. First we want the input form to clear after we submit it, which currently isn't happening. Then we want to make it so we can show our new list item in our index.html. -->
 
 *app.js*
 
 	var addTask = function(task) {
 		if(task) {
-			task = new Task(task);
-			listo.push(task);
+			var newTask = new Task(task);
+			listo.push(newTask);
 
 			$('#newItemInput').val('');
-			$('#newList').append('<a href="#" class="" id="item"><li class="list-group-item">' + task.task + '<span class="arrow pull-right"><i class="glyphicon glyphicon-arrow-right"></span></li></a>');
+			$('#newList').append('<a href="#" class="" id="item"><li class="list-group-item">' + newTask.task + '<span class="arrow pull-right"><i class="glyphicon glyphicon-arrow-right"></span></li></a>');
 
 		}
 	};
 
 
-Let's also create a way to toggle our form so we can see how jQuery affects our app's design.
+
+Create a way to toggle the form to see how jQuery affects the app's design.
 
 First we should make it so that our newTaskForm is hidden when the document loads. Let's put this near the top of our document so that it loads correctly.
 
